@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    background: linear-gradient(80deg,#fc72ff,#8f68ff,#487bff,#8f68ff,#fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heading 4.5s linear infinite;
+}
+@keyframes heading{
+    to{
+        background-position: 200%;
+    }
+}
+h1:hover{
+    font-size: 55px;
+}
+nav{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+li{
+    padding: 10px;
+    padding-right: 20px;
+}
+li a{
+    color: aliceblue;     
+}
+a:hover{
+    color: aquamarine;
+    /* text-decoration: underline lightseagreen; */
+    transition: 0.5s ease;
+    
+}
+a:focus{
+    color: rgb(250, 4, 4);
+    transition: 0.5s ease;
+}
+
+
+img{
+    height: 55px;
+    width: 100px;
+}
+img:hover{
+    transform: scale(1.3);
+}
+.drop{
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: auto;
+    list-style:none;
+
+}
+li:hover .drop{
+    display: block;
+    padding: 10px;
+    width: auto;
+    
+}
+footer{
+    text-align: center;
+    position: fixed;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 30px;
+    bottom: 0;
+}
+
+
+.cont{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    grid-gap: 10px;
+    /* width: 320px;
+    height: 320px; */
+    background-color: rgb(243, 73, 73);
+}
+.a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/span 2;
+    grid-row: 1/2;
+    background-color: red;
+}
+.b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/4;
+    grid-row: 1/span 2;
+    background-color: blue;
+}
+.c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/span 2;
+    grid-row: 3/4;
+    background-color: yellow;
+}
+.d{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/span 2;
+    background-color: green;
+}
+.e{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: whitesmoke;
+
+}

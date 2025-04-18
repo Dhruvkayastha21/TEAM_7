@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CERTIFICATE</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:linear-gradient(135deg, white, #feb47b);
+    }
+
+    #h1 {
+      font-family: 'Georgia', serif;
+      font-size: 40px;
+      color: #4a4a4a;
+      margin-bottom: 10px;
+    }
+
+    /* #im1 {
+      display: block;
+      margin: 20px auto;
+      width: 100px;
+      height: auto;
+    } */
+
+    .cr {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg,pink, #ebedee);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .main {
+      width: 70%;
+      margin: 50px auto;
+      padding: 40px;
+      border: 5px dashed #4a4a4a;
+      border-radius: 20px;
+      background-color:lightcyan;
+    }
+
+    #p {
+      font-family:cursive;
+      font-size: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    #pt {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-top: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #4a4a4a;
+      margin: 20px 0;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #4a90e2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    p.signature {
+      font-family: 'Georgia', serif;
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main" class="main">
+    <div class="cr">
+      <h1 id="h1">CERTIFICATE</h1>
+      <!-- <img id="im1" src="/quiz-logo-with-speech-bubble-icon_149152-813.jpg" alt="Logo"> -->
+      <p id="pt">Recipient Name</p>
+      <hr />
+      <p id="p">
+        "This certificate is proudly presented to you in recognition of outstanding participation and performance in the Quiz. Your enthusiasm, knowledge, and dedication have made this event a great success. Congratulations on your achievement!"
+      </p>
+      <p class="signature">SIGNATURE</p>
+      <p>----------</p>
+    </div>
+  </div>
+  <button onclick="downloadPDF()">Download PDF</button>
+  <button onclick="window.location.href='home.html'">HOME</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    let pro = prompt("What is your name?");
+    let pera = document.getElementById("pt");
+    pera.innerText = "MR/MS " + pro;
+
+    function downloadPDF() {
+      const element = document.getElementById('main');
+      html2pdf().from(element).save();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(160deg, #2c3e50, #000000);
+      color: #fff;
+      padding-bottom: 50px;
+    }
+
+    /*footer {
+    background-color: #333;
+    color:#fff;
+    text-align: center;
+    padding: 50px;
+    position:static; 
+    width: 100%;
+    bottom: 0;*/
+
+
+    /* nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 15px 30px;
+    }
+
+    nav h1 a {
+      font-size: 32px;
+      background: linear-gradient(80deg,#fc72ff,#8f68ff,#487bff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: heading 4.5s linear infinite;
+    }
+
+    @keyframes heading {
+      to {
+        background-position: 200%;
+      }
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: aquamarine;
+    }
+
+    .drop {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #111;
+      min-width: 120px;
+      z-index: 100;
+    }
+
+    li:hover .drop {
+      display: block;
+    }
+
+    .drop li {
+      padding: 10px;
+      text-align: left;
+    } */
+    nav{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        background-color: black;
+        justify-content: space-between;
+        text-align: center;
+        padding: 10px;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    li{
+        padding: 10px;
+        padding-right: 20px;
+    }
+   li a{
+        color: aliceblue;     
+    }
+    a:hover{
+        color: aquamarine;
+        /* text-decoration: underline lightseagreen; */
+        transition: 0.5s ease;
+    }
+    a:focus{
+        color: rgb(250, 4, 4);
+        transition: 0.5s ease;
+    }
+  
+    button{
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    /* img{
+        height: 55px;
+        width: 100px;
+    }
+    img:hover{
+        cursor: pointer;
+        transform: scale(1.3);
+    } */
+    .drop{
+        display: none;
+        position: absolute;
+        background-color: black;
+        width: 100px;
+        list-style:none;
+    
+    }
+    li:hover .drop{
+        display: block;
+        padding: 10px;
+    }
+    nav h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 50px;
+        background: linear-gradient(80deg,#fc72ff,#8f68ff,#487bff,#8f68ff,#fc72ff);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heading 4.5s linear infinite;
+    }
+    @keyframes heading{
+        to{
+            background-position: 200%;
+        }
+    }
+    nav h1:hover{
+        font-size: 55px;
+    }
+
+    #aus {
+      text-align: center;
+      font-size: 42px;
+      margin: 40px 0;
+      }
+      img:hover{
+        transform: scale(1.15);
+        transition: 1s ease-in-out;
+      }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      padding: 0 20px;
+    }
+
+    .p1, .p2, .p3 {
+      display: flex;
+      align-items: center;
+      gap: 30px;    
+      width:90%;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 20px;
+      color:mintcream;
+    }
+
+    
+
+    .p2{        
+      flex-direction: row-reverse;
+    }
+
+    .p1 img ,.p2 img, .p3 img {
+      width: 180px;
+      height: 180px;
+      border-radius: 30%;
+      object-fit: cover;
+      border: 3px solid aquamarine;
+    }
+
+    /* .p1 h2, .p2 h2, .p3 h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .p1 p, .p2 p, .p3 p {
+      font-size: 16px;
+      color: #ccc;
+    } */
+    .c1,.c3{
+        margin-right: 15%;
+        margin-left: auto;
+        text-align: right;
+    }
+    .c2{
+        margin-right: auto;
+        margin-left: 15%;
+        text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      .p1,.p3 {
+        flex-direction: column;
+        
+      }
+
+      .p2{
+        flex-direction: column;
+      }
+
+      /* .primg {
+        width: 140px;
+        height: 140px;
+      } */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="home.html">QUIZERA</a></h1>
+      <ul>
+       <li><a href="home.html">HOME</a></li>
+    <li>
+          <a href="p1.html">QUIZ</a>
+          <ul class="drop">
+            <li><a href="p1.html" class="" id="">CRICKET</a></li>
+            <li><a href="p2.html" class="" id="">IT</a></li>
+            <li><a href="p3.html" class="" id="">GK</a></li>
+            <li><a href="p4.html" class="" id="">MATHS</a></li>
+            <li><a href="p5.html" class="" id="">ENTER-TAINMENT</a></li>
+            <li><a href="p6.html" class="" id="">HISTORY</a></li>
+            <li><a href="p7.html" class="" id="">GEO-GRAPHY</a></li>
+            <li><a href="p8.html" class="" id="">WORD-FORMATION</a></li>
+            <li>
+          </ul>
+        </li>
+        <li><a href="#footer">CONTACT</a></li>
+        <li><a href="aus.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 id="aus">ABOUT US</h1>
+
+  <div class="main">
+    <div class="p1">
+      <img src="C:\Users\dhruv kayastha\AppData\Local\Microsoft\Windows\INetCache\IE\IHL681LR\IMG-20250412-WA0007[1].jpg" alt="VISHAL DARJI" />
+      <div class="c1">
+        <h2>VISHAL DARJI</h2>
+        <h3>Team Leader | Structure Designer</h3>
+    
+  </div>
+  </div>
+
+  <div class="p2">
+    <img src="C:\Users\dhruv kayastha\AppData\Local\Microsoft\Windows\INetCache\IE\QILQDQYA\IMG-20250414-WA0003[1].jpg" alt="DHRUV KAYASTHA" />
+    <div class="c2">
+      <h2>DHRUV KAYASTHA</h2>
+    <h3>Style and  Layout Designer | Color Pallete Designer
+    </h3>
+    </div>
+  </div>
+
+  <div class="p3">
+    <img src="C:\Users\dhruv kayastha\AppData\Local\Microsoft\Windows\INetCache\IE\PIY8CTR3\IMG-20250414-WA0007[1].jpg" alt="PRINCE PRAJAPATI" />
+    <div class="c3">
+      <h2>PRINCE PRAJAPATI</h2>
+    <h3>Logic Handler | Quiz Maker</h3>
+    </div>
+  </div>
+</div>
+
+<footer id="footer">
+  <p>&copy; 2025 QUIZERA. All rights reserved.</p>
+  <p>
+      <a href="#">&phone; 6359728857<br></a> 
+      <a href="#">Gmail : quizera@gmail.com</a> <br><br>
+      <a href=""><i><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-google-plus"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+      <a href=""><i class="fa-brands fa-snapchat"></i></a>
+      <a href=""><i class="fa-brands fa-gmail"></i></a><br>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>
+  </p>
+</footer>
+<style>
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position:static; /* POSITION FIXED IS USED TO FIXED THE FOOTER */
+    width: 100%;
+    bottom: 0;
+}
+
+</style>
+
+
+</body>
+</html>
